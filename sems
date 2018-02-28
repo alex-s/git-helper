@@ -14,17 +14,24 @@ $options = [];
 if (isset($argv[1], $argv[2]) &&  $argv[1] === 'check') {
     $branches = [];
     foreach (run($prefix, 'branch', '', '') as $branch) {
+        $branch = trim(ltrim($branch, '*'));
+
         if (strpos($branch, $argv[2]) !== false) {
             $branches[] = $branch;
+        }
+
+        if ($branch === $argv[2]) {
+            $branches = [$branch];
+            break;
         }
     }
 
     if (count($branches) === 1) {
-        $branch = trim(ltrim($branches[0], '*'));
-        $result = run($prefix, 'checkout', '', $branch);
+        $result = run($prefix, 'checkout', '', $branches[0]);
         printResult($result);
     } else {
         var_dump('found 0 or >1 branches');
+        var_dump($branches);
         die;
     }
 } else {
