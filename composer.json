@@ -1,0 +1,12 @@
+{
+    "require": {
+        "symfony/console": "^3.4",
+        "cpliakas/git-wrapper": "^1.7",
+        "monolog/monolog": "^1.23"
+    },
+    "autoload": {
+        "psr-4": {
+            "GitHelper\\": "src/GitHelper"
+        }
+    }
+}
