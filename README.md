@@ -1,6 +1,7 @@
 # git-helper
 Adds few useful features for manipulation of local git repository
-
+* git:find <search>
+* git:review <search>
 ## installation
 
 ```
@@ -14,4 +15,13 @@ Adds few useful features for manipulation of local git repository
 
 ```
 (any git folder )> YOUR_ALIAS git:find 1234
+# find branch by pattern and checkout to it
+```
+```
+(any git folder )> YOUR_ALIAS git:review 1234
+# this is equivalent of 
+# > git checkout master
+# > git branch -D 1234
+# > git checkout 1234
+
 ```  

@@ -8,5 +8,6 @@ use Symfony\Component\Console\Application;
 $application = new Application();
 
 $application->add(new \GitHelper\Command\FindCommand());
+$application->add(new \GitHelper\Command\ReviewCommand());
 
 $application->run();
