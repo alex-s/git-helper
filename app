@@ -9,5 +9,7 @@ $application = new Application();
 
 $application->add(new \GitHelper\Command\FindCommand());
 $application->add(new \GitHelper\Command\ReviewCommand());
+$application->add(new \GitHelper\Command\PushCommand());
+$application->add(new \GitHelper\Command\PullCommand());
 
 $application->run();

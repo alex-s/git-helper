@@ -9,7 +9,7 @@ class ReviewCommand extends BaseCommand
     protected function configure()
     {
         $this
-            ->setName('git:review')
+            ->setName('review')
             ->addArgument('search',InputArgument::REQUIRED)
             ->setDescription('Recreate issue branch and checkout last version from origin')
         ;

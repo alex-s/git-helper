@@ -9,7 +9,7 @@ class FindCommand extends BaseCommand
     protected function configure()
     {
         $this
-            ->setName('git:find')
+            ->setName('find')
             ->addArgument('search',InputArgument::REQUIRED)
             ->setDescription('Find branches by issue number')
         ;
