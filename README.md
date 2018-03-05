@@ -2,8 +2,7 @@
 Adds few useful features for manipulation of local git repository
 * find <search>
 * review <search>
-* pull
-* push
+* create <issue_num>
 ## installation
 
 ```
@@ -16,6 +15,13 @@ Adds few useful features for manipulation of local git repository
 ## usage
 
 ```
+(any git folder )> YOUR_ALIAS create 1234
+# search issue in jira (need fill params.ini) 
+# and create branch according pattern
+# the same as
+# > git checkout -d your_issue_pattern_name
+```
+```
 (any git folder )> YOUR_ALIAS find 1234
 # find branch by pattern and checkout to it
 ```
@@ -27,11 +33,3 @@ Adds few useful features for manipulation of local git repository
 # > git checkout 1234
 
 ```  
-```
-(any git folder )> YOUR_ALIAS pull
-# pull data from origin current branch
-```
-```
-(any git folder )> YOUR_ALIAS push
-# push data to origin current branch
-```

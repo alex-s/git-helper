@@ -1,5 +1,5 @@
 <?php
-namespace Sync\JiraApi;
+namespace GitHelper\JiraApi;
 
 use chobie\Jira\Api;
 
@@ -26,6 +26,6 @@ class AdvancedApi extends Api
             return $result;
         }
 
-        return new AdvancedResult($result->getResult());
+        return new AdvancedIssue($result->getResult());
     }
 }

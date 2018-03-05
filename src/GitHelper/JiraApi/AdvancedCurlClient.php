@@ -1,11 +1,10 @@
 <?php
-namespace Sync\JiraApi;
+namespace GitHelper\JiraApi;
 
 use chobie\Jira\Api\Authentication\AuthenticationInterface;
 use chobie\Jira\Api\Client\CurlClient;
 use chobie\Jira\Api\Exception;
 use chobie\Jira\Api\UnauthorizedException;
-use Sync\EverhourApi\ApiKeyAuth;
 
 class AdvancedCurlClient extends CurlClient
 {

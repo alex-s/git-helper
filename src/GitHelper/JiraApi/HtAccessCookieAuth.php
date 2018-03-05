@@ -1,5 +1,5 @@
 <?php
-namespace Sync\JiraApi;
+namespace GitHelper\JiraApi;
 
 use \chobie\Jira\Api\Authentication\Basic;
 

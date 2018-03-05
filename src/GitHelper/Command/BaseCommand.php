@@ -133,4 +133,9 @@ abstract class BaseCommand extends Command
 
         return $helper->ask($this->input, $this->output, $question);
     }
+
+    public function getParameters()
+    {
+        return parse_ini_file('params.ini');
+    }
 }
