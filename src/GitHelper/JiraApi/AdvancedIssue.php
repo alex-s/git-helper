@@ -23,12 +23,9 @@ class AdvancedIssue extends Issue
 
     public function getBranchNameByPattern($pattern, $limit)
     {
-        $name = str_replace(' ', '-', $this->name);
+        $name = str_replace(' ', '-', strtolower($this->name));
         $name = preg_replace('/[^A-Za-z0-9\-]/', '', $name);
-
-        if (strlen($name) > $limit) {
-            $name = substr($name, 0, strrpos($name, '-', -1 * (strlen($name) - $limit) ));
-        }
+        $name = preg_replace('/-+/', '-', $name);
 
         $name = strtr($pattern, [
             '%type%' => strtolower($this->type) === 'bug' ? 'bug': 'feature',
