@@ -19,15 +19,9 @@ class ReviewCommand extends BaseCommand
     {
         $git = $this->getGit();
         $search = $this->getArgument('search');
-
+        $git->fetch();
 
         $remoteBranches = $this->findBranches($search, true);
-
-        if (count($remoteBranches) === 0) {
-            $git->fetch();
-            $remoteBranches = $this->findBranches($search, true);
-        }
-
         $branch = $this->chooser($remoteBranches);
 
         if ($this->isLocalBranchExists($branch)) {
