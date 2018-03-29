@@ -44,4 +44,13 @@ class ReviewCommand extends BaseCommand
 
         return false;
     }
+
+
+    protected function getAfterExecuteCommands()
+    {
+        return [
+            'app/console cache:clear',
+            'app/console assetic:dump',
+        ];
+    }
 }

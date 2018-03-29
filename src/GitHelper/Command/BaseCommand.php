@@ -42,6 +42,8 @@ abstract class BaseCommand extends Command
         $this->output = $output;
 
         $this->executeCommand();
+
+        $this->afterExecute();
     }
 
     abstract protected function executeCommand();
@@ -57,6 +59,23 @@ abstract class BaseCommand extends Command
         }
 
         return  $this->logger;
+    }
+
+    protected function afterExecute()
+    {
+        foreach ($this->getAfterExecuteCommands() as $command) {
+            $result = [];
+            exec($command, $result);
+
+            foreach ($result as $line) {
+                $this->getLogger()->info($line);
+            }
+        }
+    }
+
+    protected function getAfterExecuteCommands()
+    {
+        return [];
     }
 
     /**
