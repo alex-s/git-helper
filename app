@@ -10,5 +10,6 @@ $application = new Application();
 $application->add(new \GitHelper\Command\FindCommand());
 $application->add(new \GitHelper\Command\ReviewCommand());
 $application->add(new \GitHelper\Command\CreateCommand());
+$application->add(new \GitHelper\Command\KillCommand());
 
 $application->run();
