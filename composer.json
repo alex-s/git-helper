@@ -3,7 +3,8 @@
         "symfony/console": "^3.4",
         "cpliakas/git-wrapper": "^1.7",
         "monolog/monolog": "^1.23",
-        "chobie/jira-api-restclient": "2.0.x-dev"
+        "chobie/jira-api-restclient": "2.0.x-dev",
+        "gentle/bitbucket-api": "^1.1"
     },
     "autoload": {
         "psr-4": {
