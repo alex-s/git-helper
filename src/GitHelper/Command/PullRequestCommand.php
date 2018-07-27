@@ -34,7 +34,7 @@ class PullRequestCommand extends BaseCommand
             $stat = json_decode($pull->diffstat($acc, $repo, $pullParams->id)->getContent());
 
             foreach ($stat->values as $file) {
-                if (in_array($file->status, ['merge conflict', 'remote deleted'])) {
+                if (in_array($file->status, ['merge conflict', 'remote deleted', 'local deleted'])) {
                     if (!isset($conflicts[$pullParams->author->display_name])) {
                         $conflicts[$pullParams->author->display_name] = [];
                     }
