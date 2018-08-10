@@ -52,6 +52,8 @@ class PullRequestCommand extends BaseCommand
                 $this->getLogger()->info('  ' . $pull);
             }
         }
+
+        $this->getLogger()->info('Done');
     }
 
     protected function getPulls(ExtendedPullRequests $pull, $acc, $repo)

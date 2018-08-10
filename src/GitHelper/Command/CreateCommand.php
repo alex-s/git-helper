@@ -27,6 +27,7 @@ class CreateCommand extends BaseCommand
         );
 
         $response = $api->getIssue($params['project_key'] . '-' . $this->getArgument('number'));
+
         $branch = $this->getBranchNameByPattern($response->getResult(), $params['branch_template'], $params['branch_length_limit']);
 
         $this->getGit()->checkoutNewBranch($branch);
@@ -41,6 +42,7 @@ class CreateCommand extends BaseCommand
         list($issueKey, $number) = explode('-', $issue->getKey());
 
         $name = str_replace(' ', '-', strtolower($name));
+        $name = str_replace(':', '-', strtolower($name));
         $name = preg_replace('/[^A-Za-z0-9\-]/', '', $name);
         $name = preg_replace('/-+/', '-', $name);
 
