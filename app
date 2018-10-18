@@ -12,5 +12,6 @@ $application->add(new \GitHelper\Command\ReviewCommand());
 $application->add(new \GitHelper\Command\CreateCommand());
 $application->add(new \GitHelper\Command\KillCommand());
 $application->add(new \GitHelper\Command\PullRequestCommand());
+$application->add(new \GitHelper\Command\ReportCommand());
 
 $application->run();

@@ -4,7 +4,8 @@
         "cpliakas/git-wrapper": "^1.7",
         "monolog/monolog": "^1.23",
         "chobie/jira-api-restclient": "2.0.x-dev",
-        "gentle/bitbucket-api": "^1.1"
+        "gentle/bitbucket-api": "^1.1",
+        "guzzlehttp/guzzle": "^6.3"
     },
     "autoload": {
         "psr-4": {
