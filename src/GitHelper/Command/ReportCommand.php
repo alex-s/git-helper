@@ -12,6 +12,7 @@ class ReportCommand extends BaseCommand
         'Alex Schastniy',
         'Alexander Shevchuk',
         'Alexey Buldyk',
+        'XSEM Dev Pool',
     ];
 
     private $priorityOrder = [

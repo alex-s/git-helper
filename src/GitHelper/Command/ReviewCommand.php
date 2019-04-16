@@ -51,6 +51,8 @@ class ReviewCommand extends BaseCommand
         return [
             'app/console cache:clear',
             'app/console assetic:dump',
+            'bin/console cache:clear',
+            'bin/console assetic:dump',
         ];
     }
 }
